@@ -1,0 +1,123 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>RAG Evaluation Summary</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                .container { max-width: 1200px; margin: 0 auto; }
+                .header { background-color: #4b6584; color: white; padding: 20px; text-align: center; }
+                .section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+                .metric-box { display: inline-block; width: 180px; padding: 15px; margin: 10px; 
+                              text-align: center; background-color: #f5f6fa; border-radius: 5px; }
+                .score { font-size: 24px; font-weight: bold; margin: 10px 0; }
+                .good { color: #27ae60; }
+                .average { color: #f39c12; }
+                .poor { color: #e74c3c; }
+                table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+                th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+                th { background-color: #f2f2f2; }
+                img { max-width: 100%; height: auto; margin: 15px 0; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>RAG Evaluation Summary Report</h1>
+                    <p>Generated on 2025-04-20 14:10:25</p>
+                </div>
+                
+                <div class="section">
+                    <h2>Quality Metrics Summary</h2>
+                    <div class="metric-box">
+                        <h3>Faithfulness</h3>
+                        <div class="score average">5.0/10</div>
+                    </div>
+                    <div class="metric-box">
+                        <h3>Relevance</h3>
+                        <div class="score average">5.0/10</div>
+                    </div>
+                    <div class="metric-box">
+                        <h3>Combined Score</h3>
+                        <div class="score average">5.0/10</div>
+                    </div>
+                    <div class="metric-box">
+                        <h3>Context Relevancy</h3>
+                        <div class="score average">5.0/10</div>
+                    </div>
+                    <div class="metric-box">
+                        <h3>Context Recall</h3>
+                        <div class="score average">5.0/10</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>Performance Metrics Summary</h2>
+                    <div class="metric-box">
+                        <h3>Avg Retrieval Time</h3>
+                        <div class="score">0.911s</div>
+                    </div>
+                    <div class="metric-box">
+                        <h3>Avg Total Time</h3>
+                        <div class="score">1.707s</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>Question-Answer Samples</h2>
+                    <table>
+                        <tr>
+                            <th>Question</th>
+                            <th>Answer</th>
+                            <th>Faithfulness</th>
+                            <th>Relevance</th>
+                        </tr>
+        
+                        <tr>
+                            <td>What programs are offered by the School of Business Studies at IBA?</td>
+                            <td>The School of Business Studies at IBA offers the following programs: BBA, MBA, EMBA, MS Finance, MS Islamic Banking and Finance, MS Management, MS Marketing, and PhD programs in Accounting and Finance, Economics, and Management.</td>
+                            <td>5.0/10</td>
+                            <td>5.0/10</td>
+                        </tr>
+            
+                        <tr>
+                            <td>Tell me about the BS Economics program at IBA</td>
+                            <td>The BS Economics program at IBA is a 4-year degree program that provides a solid foundation in economics and prepares students for entry-level positions in private and public sector corporations, development organizations, banks, education, and research organizations. The program offers a well-coordinated curriculum and a wide range of courses that give students ample opportunities to broaden their knowledge base.</td>
+                            <td>5.0/10</td>
+                            <td>5.0/10</td>
+                        </tr>
+            
+                        <tr>
+                            <td>What is the financial assistance program at IBA?</td>
+                            <td>The financial assistance program at IBA provides need-based financial assistance in the form of scholarships, funded through Zakat and public and private sector donors. The program covers a wide range of need-based financial assistance, including bridge financing or scholarships, and is available for undergraduate and graduate students.</td>
+                            <td>5.0/10</td>
+                            <td>5.0/10</td>
+                        </tr>
+            
+                        <tr>
+                            <td>Who is the Executive Director of IBA?</td>
+                            <td>The Executive Director of IBA is Dr. S Akbar Zaidi.</td>
+                            <td>5.0/10</td>
+                            <td>5.0/10</td>
+                        </tr>
+            
+                        <tr>
+                            <td>What is the duration of the MBA program at IBA?</td>
+                            <td>The duration of the MBA program at IBA is 2 years.</td>
+                            <td>5.0/10</td>
+                            <td>5.0/10</td>
+                        </tr>
+            
+                    </table>
+                </div>
+                
+                <div class="section">
+                    <h2>Visualizations</h2>
+                    <img src="avg_scores_{timestamp}.png" alt="Average Scores">
+                    <img src="score_distributions_{timestamp}.png" alt="Score Distributions">
+                    <img src="response_times_{timestamp}.png" alt="Response Times">
+                </div>
+            </div>
+        </body>
+        </html>
+        

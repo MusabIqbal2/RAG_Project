@@ -12,10 +12,10 @@ try:
     from ragas.metrics import (
         faithfulness,
         answer_relevancy,
-        context_relevancy,
-        context_recall
+        # context_relevancy,
+        context_recall,
+        # harmfulness
     )
-    from ragas.metrics.critique import harmfulness
     from ragas import evaluate
 except ImportError:
     raise ImportError(
@@ -88,9 +88,9 @@ class RAGEvaluator:
                 metrics=[
                     faithfulness,
                     answer_relevancy, 
-                    context_relevancy,
+                    # context_relevancy,
                     context_recall,
-                    harmfulness
+                    # harmfulness
                 ]
             )
             
