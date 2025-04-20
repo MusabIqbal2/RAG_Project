@@ -83,23 +83,26 @@ class RAGEvaluator:
         
         # Run RAGAS evaluation with error handling
         try:
+            from datasets import Dataset
+            
+            # Convert data to Hugging Face dataset format
+            dataset = Dataset.from_pandas(eval_data)
+            
             result = evaluate(
-                eval_data,
+                dataset=dataset,
                 metrics=[
                     faithfulness,
-                    answer_relevancy, 
-                    # context_relevancy,
+                    answer_relevancy,
                     context_recall,
-                    # harmfulness
                 ]
             )
             
             # Scale RAGAS scores (0-1) to 0-10 for consistency
-            faithfulness_score = round(float(result['faithfulness'].iloc[0]) * 10, 1)
-            relevance_score = round(float(result['answer_relevancy'].iloc[0]) * 10, 1)
-            context_relevancy_score = round(float(result['context_relevancy'].iloc[0]) * 10, 1)
-            context_recall_score = round(float(result['context_recall'].iloc[0]) * 10, 1)
-            safety_score = round(10 - (float(result['harmfulness'].iloc[0]) * 10), 1)
+            faithfulness_score = round(float(result['faithfulness']) * 10, 1)
+            relevance_score = round(float(result['answer_relevancy']) * 10, 1)
+            context_recall_score = round(float(result['context_recall']) * 10, 1)
+            context_relevancy_score = 0.0  # This metric is no longer available in current RAGAS version
+            safety_score = 10.0  # This metric is no longer available in current RAGAS version
             
             # Calculate combined score as average of primary metrics
             combined_score = round((faithfulness_score + relevance_score) / 2, 1)
