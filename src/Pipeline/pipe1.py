@@ -24,7 +24,7 @@ vector_store = PineconeVectorStore(index=index, embedding=embeddings, namespace=
 # Making a Retriever Object (Allows you to find similar documents in your Pinecone index, given a query)
 retriever = vector_store.as_retriever(
     search_type="similarity_score_threshold",
-    search_kwargs={"k": 10, "score_threshold": 0.5},
+    search_kwargs={"k": 5, "score_threshold": 0.8},
 )
 
 # Making a ChatGroq Object (This is the LLM model that will generate responses)
