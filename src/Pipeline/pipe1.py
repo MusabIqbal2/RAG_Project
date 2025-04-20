@@ -3,7 +3,6 @@ import os
 from langchain_nomic import NomicEmbeddings
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
-
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone
 from langchain_groq import ChatGroq
